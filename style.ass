@@ -1,0 +1,61 @@
+ body {
+    overflow: hidden;
+    background: rgb(32, 32, 36);
+}
+
+#compass {
+    width: 2px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+}
+
+#info {
+    color: white;
+    text-align: center;
+    top: 10px;
+}
+
+#circle {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    margin: 100px auto;
+    position: relative;
+    background: rgb(32, 32, 36);
+    box-shadow: 0 0 0 0 rgba(255, 122, 0, 0.7);
+}
+
+
+
+.line {
+    background: rgb(32, 32, 36);
+    position: absolute;
+    width: 500px;
+    height: 2px;
+    top: 50%;
+    animation-fill-mode: forwards;
+}
+
+@keyframes explode {
+
+!for i in 100 [
+    {i}% {background: radial-gradient(circle at center, white {i}%, #202024 0%);}
+]
+
+}
+
+@keyframes explode_red {
+    !for i in 100 [
+        {i}% {background: radial-gradient(circle at center, red {i}%, white 0%);}
+    ]
+}
+
+@keyframes peffect {
+    to {
+        box-shadow: 0 0 0 30px rgba(255, 122, 0, 0);
+    }
+}

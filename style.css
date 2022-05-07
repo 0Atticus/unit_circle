@@ -1,0 +1,246 @@
+ body {
+overflow: hidden;
+background: rgb(32, 32, 36);
+}
+#compass {
+width: 2px;
+height: 50px;
+background: red;
+position: absolute;
+left: 50%;
+top: 10%;
+}
+#info {
+color: white;
+text-align: center;
+top: 10px;
+}
+#circle {
+border: 2px solid white;
+border-radius: 50%;
+width: 500px;
+height: 500px;
+margin: 100px auto;
+position: relative;
+background: rgb(32, 32, 36);
+box-shadow: 0 0 0 0 rgba(255, 122, 0, 0.7);
+}
+.line {
+background: rgb(32, 32, 36);
+position: absolute;
+width: 500px;
+height: 2px;
+top: 50%;
+animation-fill-mode: forwards;
+}
+@keyframes explode {
+0% {background: radial-gradient(circle at center, white 0%, #202024 0%);}
+1% {background: radial-gradient(circle at center, white 1%, #202024 0%);}
+2% {background: radial-gradient(circle at center, white 2%, #202024 0%);}
+3% {background: radial-gradient(circle at center, white 3%, #202024 0%);}
+4% {background: radial-gradient(circle at center, white 4%, #202024 0%);}
+5% {background: radial-gradient(circle at center, white 5%, #202024 0%);}
+6% {background: radial-gradient(circle at center, white 6%, #202024 0%);}
+7% {background: radial-gradient(circle at center, white 7%, #202024 0%);}
+8% {background: radial-gradient(circle at center, white 8%, #202024 0%);}
+9% {background: radial-gradient(circle at center, white 9%, #202024 0%);}
+10% {background: radial-gradient(circle at center, white 10%, #202024 0%);}
+11% {background: radial-gradient(circle at center, white 11%, #202024 0%);}
+12% {background: radial-gradient(circle at center, white 12%, #202024 0%);}
+13% {background: radial-gradient(circle at center, white 13%, #202024 0%);}
+14% {background: radial-gradient(circle at center, white 14%, #202024 0%);}
+15% {background: radial-gradient(circle at center, white 15%, #202024 0%);}
+16% {background: radial-gradient(circle at center, white 16%, #202024 0%);}
+17% {background: radial-gradient(circle at center, white 17%, #202024 0%);}
+18% {background: radial-gradient(circle at center, white 18%, #202024 0%);}
+19% {background: radial-gradient(circle at center, white 19%, #202024 0%);}
+20% {background: radial-gradient(circle at center, white 20%, #202024 0%);}
+21% {background: radial-gradient(circle at center, white 21%, #202024 0%);}
+22% {background: radial-gradient(circle at center, white 22%, #202024 0%);}
+23% {background: radial-gradient(circle at center, white 23%, #202024 0%);}
+24% {background: radial-gradient(circle at center, white 24%, #202024 0%);}
+25% {background: radial-gradient(circle at center, white 25%, #202024 0%);}
+26% {background: radial-gradient(circle at center, white 26%, #202024 0%);}
+27% {background: radial-gradient(circle at center, white 27%, #202024 0%);}
+28% {background: radial-gradient(circle at center, white 28%, #202024 0%);}
+29% {background: radial-gradient(circle at center, white 29%, #202024 0%);}
+30% {background: radial-gradient(circle at center, white 30%, #202024 0%);}
+31% {background: radial-gradient(circle at center, white 31%, #202024 0%);}
+32% {background: radial-gradient(circle at center, white 32%, #202024 0%);}
+33% {background: radial-gradient(circle at center, white 33%, #202024 0%);}
+34% {background: radial-gradient(circle at center, white 34%, #202024 0%);}
+35% {background: radial-gradient(circle at center, white 35%, #202024 0%);}
+36% {background: radial-gradient(circle at center, white 36%, #202024 0%);}
+37% {background: radial-gradient(circle at center, white 37%, #202024 0%);}
+38% {background: radial-gradient(circle at center, white 38%, #202024 0%);}
+39% {background: radial-gradient(circle at center, white 39%, #202024 0%);}
+40% {background: radial-gradient(circle at center, white 40%, #202024 0%);}
+41% {background: radial-gradient(circle at center, white 41%, #202024 0%);}
+42% {background: radial-gradient(circle at center, white 42%, #202024 0%);}
+43% {background: radial-gradient(circle at center, white 43%, #202024 0%);}
+44% {background: radial-gradient(circle at center, white 44%, #202024 0%);}
+45% {background: radial-gradient(circle at center, white 45%, #202024 0%);}
+46% {background: radial-gradient(circle at center, white 46%, #202024 0%);}
+47% {background: radial-gradient(circle at center, white 47%, #202024 0%);}
+48% {background: radial-gradient(circle at center, white 48%, #202024 0%);}
+49% {background: radial-gradient(circle at center, white 49%, #202024 0%);}
+50% {background: radial-gradient(circle at center, white 50%, #202024 0%);}
+51% {background: radial-gradient(circle at center, white 51%, #202024 0%);}
+52% {background: radial-gradient(circle at center, white 52%, #202024 0%);}
+53% {background: radial-gradient(circle at center, white 53%, #202024 0%);}
+54% {background: radial-gradient(circle at center, white 54%, #202024 0%);}
+55% {background: radial-gradient(circle at center, white 55%, #202024 0%);}
+56% {background: radial-gradient(circle at center, white 56%, #202024 0%);}
+57% {background: radial-gradient(circle at center, white 57%, #202024 0%);}
+58% {background: radial-gradient(circle at center, white 58%, #202024 0%);}
+59% {background: radial-gradient(circle at center, white 59%, #202024 0%);}
+60% {background: radial-gradient(circle at center, white 60%, #202024 0%);}
+61% {background: radial-gradient(circle at center, white 61%, #202024 0%);}
+62% {background: radial-gradient(circle at center, white 62%, #202024 0%);}
+63% {background: radial-gradient(circle at center, white 63%, #202024 0%);}
+64% {background: radial-gradient(circle at center, white 64%, #202024 0%);}
+65% {background: radial-gradient(circle at center, white 65%, #202024 0%);}
+66% {background: radial-gradient(circle at center, white 66%, #202024 0%);}
+67% {background: radial-gradient(circle at center, white 67%, #202024 0%);}
+68% {background: radial-gradient(circle at center, white 68%, #202024 0%);}
+69% {background: radial-gradient(circle at center, white 69%, #202024 0%);}
+70% {background: radial-gradient(circle at center, white 70%, #202024 0%);}
+71% {background: radial-gradient(circle at center, white 71%, #202024 0%);}
+72% {background: radial-gradient(circle at center, white 72%, #202024 0%);}
+73% {background: radial-gradient(circle at center, white 73%, #202024 0%);}
+74% {background: radial-gradient(circle at center, white 74%, #202024 0%);}
+75% {background: radial-gradient(circle at center, white 75%, #202024 0%);}
+76% {background: radial-gradient(circle at center, white 76%, #202024 0%);}
+77% {background: radial-gradient(circle at center, white 77%, #202024 0%);}
+78% {background: radial-gradient(circle at center, white 78%, #202024 0%);}
+79% {background: radial-gradient(circle at center, white 79%, #202024 0%);}
+80% {background: radial-gradient(circle at center, white 80%, #202024 0%);}
+81% {background: radial-gradient(circle at center, white 81%, #202024 0%);}
+82% {background: radial-gradient(circle at center, white 82%, #202024 0%);}
+83% {background: radial-gradient(circle at center, white 83%, #202024 0%);}
+84% {background: radial-gradient(circle at center, white 84%, #202024 0%);}
+85% {background: radial-gradient(circle at center, white 85%, #202024 0%);}
+86% {background: radial-gradient(circle at center, white 86%, #202024 0%);}
+87% {background: radial-gradient(circle at center, white 87%, #202024 0%);}
+88% {background: radial-gradient(circle at center, white 88%, #202024 0%);}
+89% {background: radial-gradient(circle at center, white 89%, #202024 0%);}
+90% {background: radial-gradient(circle at center, white 90%, #202024 0%);}
+91% {background: radial-gradient(circle at center, white 91%, #202024 0%);}
+92% {background: radial-gradient(circle at center, white 92%, #202024 0%);}
+93% {background: radial-gradient(circle at center, white 93%, #202024 0%);}
+94% {background: radial-gradient(circle at center, white 94%, #202024 0%);}
+95% {background: radial-gradient(circle at center, white 95%, #202024 0%);}
+96% {background: radial-gradient(circle at center, white 96%, #202024 0%);}
+97% {background: radial-gradient(circle at center, white 97%, #202024 0%);}
+98% {background: radial-gradient(circle at center, white 98%, #202024 0%);}
+99% {background: radial-gradient(circle at center, white 99%, #202024 0%);}
+100% {background: radial-gradient(circle at center, white 100%, #202024 0%);}
+}
+@keyframes explode_red {
+    0% {background: radial-gradient(circle at center, red 0%, white 0%);}
+    1% {background: radial-gradient(circle at center, red 1%, white 0%);}
+    2% {background: radial-gradient(circle at center, red 2%, white 0%);}
+    3% {background: radial-gradient(circle at center, red 3%, white 0%);}
+    4% {background: radial-gradient(circle at center, red 4%, white 0%);}
+    5% {background: radial-gradient(circle at center, red 5%, white 0%);}
+    6% {background: radial-gradient(circle at center, red 6%, white 0%);}
+    7% {background: radial-gradient(circle at center, red 7%, white 0%);}
+    8% {background: radial-gradient(circle at center, red 8%, white 0%);}
+    9% {background: radial-gradient(circle at center, red 9%, white 0%);}
+    10% {background: radial-gradient(circle at center, red 10%, white 0%);}
+    11% {background: radial-gradient(circle at center, red 11%, white 0%);}
+    12% {background: radial-gradient(circle at center, red 12%, white 0%);}
+    13% {background: radial-gradient(circle at center, red 13%, white 0%);}
+    14% {background: radial-gradient(circle at center, red 14%, white 0%);}
+    15% {background: radial-gradient(circle at center, red 15%, white 0%);}
+    16% {background: radial-gradient(circle at center, red 16%, white 0%);}
+    17% {background: radial-gradient(circle at center, red 17%, white 0%);}
+    18% {background: radial-gradient(circle at center, red 18%, white 0%);}
+    19% {background: radial-gradient(circle at center, red 19%, white 0%);}
+    20% {background: radial-gradient(circle at center, red 20%, white 0%);}
+    21% {background: radial-gradient(circle at center, red 21%, white 0%);}
+    22% {background: radial-gradient(circle at center, red 22%, white 0%);}
+    23% {background: radial-gradient(circle at center, red 23%, white 0%);}
+    24% {background: radial-gradient(circle at center, red 24%, white 0%);}
+    25% {background: radial-gradient(circle at center, red 25%, white 0%);}
+    26% {background: radial-gradient(circle at center, red 26%, white 0%);}
+    27% {background: radial-gradient(circle at center, red 27%, white 0%);}
+    28% {background: radial-gradient(circle at center, red 28%, white 0%);}
+    29% {background: radial-gradient(circle at center, red 29%, white 0%);}
+    30% {background: radial-gradient(circle at center, red 30%, white 0%);}
+    31% {background: radial-gradient(circle at center, red 31%, white 0%);}
+    32% {background: radial-gradient(circle at center, red 32%, white 0%);}
+    33% {background: radial-gradient(circle at center, red 33%, white 0%);}
+    34% {background: radial-gradient(circle at center, red 34%, white 0%);}
+    35% {background: radial-gradient(circle at center, red 35%, white 0%);}
+    36% {background: radial-gradient(circle at center, red 36%, white 0%);}
+    37% {background: radial-gradient(circle at center, red 37%, white 0%);}
+    38% {background: radial-gradient(circle at center, red 38%, white 0%);}
+    39% {background: radial-gradient(circle at center, red 39%, white 0%);}
+    40% {background: radial-gradient(circle at center, red 40%, white 0%);}
+    41% {background: radial-gradient(circle at center, red 41%, white 0%);}
+    42% {background: radial-gradient(circle at center, red 42%, white 0%);}
+    43% {background: radial-gradient(circle at center, red 43%, white 0%);}
+    44% {background: radial-gradient(circle at center, red 44%, white 0%);}
+    45% {background: radial-gradient(circle at center, red 45%, white 0%);}
+    46% {background: radial-gradient(circle at center, red 46%, white 0%);}
+    47% {background: radial-gradient(circle at center, red 47%, white 0%);}
+    48% {background: radial-gradient(circle at center, red 48%, white 0%);}
+    49% {background: radial-gradient(circle at center, red 49%, white 0%);}
+    50% {background: radial-gradient(circle at center, red 50%, white 0%);}
+    51% {background: radial-gradient(circle at center, red 51%, white 0%);}
+    52% {background: radial-gradient(circle at center, red 52%, white 0%);}
+    53% {background: radial-gradient(circle at center, red 53%, white 0%);}
+    54% {background: radial-gradient(circle at center, red 54%, white 0%);}
+    55% {background: radial-gradient(circle at center, red 55%, white 0%);}
+    56% {background: radial-gradient(circle at center, red 56%, white 0%);}
+    57% {background: radial-gradient(circle at center, red 57%, white 0%);}
+    58% {background: radial-gradient(circle at center, red 58%, white 0%);}
+    59% {background: radial-gradient(circle at center, red 59%, white 0%);}
+    60% {background: radial-gradient(circle at center, red 60%, white 0%);}
+    61% {background: radial-gradient(circle at center, red 61%, white 0%);}
+    62% {background: radial-gradient(circle at center, red 62%, white 0%);}
+    63% {background: radial-gradient(circle at center, red 63%, white 0%);}
+    64% {background: radial-gradient(circle at center, red 64%, white 0%);}
+    65% {background: radial-gradient(circle at center, red 65%, white 0%);}
+    66% {background: radial-gradient(circle at center, red 66%, white 0%);}
+    67% {background: radial-gradient(circle at center, red 67%, white 0%);}
+    68% {background: radial-gradient(circle at center, red 68%, white 0%);}
+    69% {background: radial-gradient(circle at center, red 69%, white 0%);}
+    70% {background: radial-gradient(circle at center, red 70%, white 0%);}
+    71% {background: radial-gradient(circle at center, red 71%, white 0%);}
+    72% {background: radial-gradient(circle at center, red 72%, white 0%);}
+    73% {background: radial-gradient(circle at center, red 73%, white 0%);}
+    74% {background: radial-gradient(circle at center, red 74%, white 0%);}
+    75% {background: radial-gradient(circle at center, red 75%, white 0%);}
+    76% {background: radial-gradient(circle at center, red 76%, white 0%);}
+    77% {background: radial-gradient(circle at center, red 77%, white 0%);}
+    78% {background: radial-gradient(circle at center, red 78%, white 0%);}
+    79% {background: radial-gradient(circle at center, red 79%, white 0%);}
+    80% {background: radial-gradient(circle at center, red 80%, white 0%);}
+    81% {background: radial-gradient(circle at center, red 81%, white 0%);}
+    82% {background: radial-gradient(circle at center, red 82%, white 0%);}
+    83% {background: radial-gradient(circle at center, red 83%, white 0%);}
+    84% {background: radial-gradient(circle at center, red 84%, white 0%);}
+    85% {background: radial-gradient(circle at center, red 85%, white 0%);}
+    86% {background: radial-gradient(circle at center, red 86%, white 0%);}
+    87% {background: radial-gradient(circle at center, red 87%, white 0%);}
+    88% {background: radial-gradient(circle at center, red 88%, white 0%);}
+    89% {background: radial-gradient(circle at center, red 89%, white 0%);}
+    90% {background: radial-gradient(circle at center, red 90%, white 0%);}
+    91% {background: radial-gradient(circle at center, red 91%, white 0%);}
+    92% {background: radial-gradient(circle at center, red 92%, white 0%);}
+    93% {background: radial-gradient(circle at center, red 93%, white 0%);}
+    94% {background: radial-gradient(circle at center, red 94%, white 0%);}
+    95% {background: radial-gradient(circle at center, red 95%, white 0%);}
+    96% {background: radial-gradient(circle at center, red 96%, white 0%);}
+    97% {background: radial-gradient(circle at center, red 97%, white 0%);}
+    98% {background: radial-gradient(circle at center, red 98%, white 0%);}
+    99% {background: radial-gradient(circle at center, red 99%, white 0%);}
+    100% {background: radial-gradient(circle at center, red 100%, white 0%);}
+}
+@keyframes peffect {
+to {
+    box-shadow: 0 0 0 30px rgba(255, 122, 0, 0);
+}
+}
