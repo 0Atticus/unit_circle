@@ -25,7 +25,7 @@
     height: 500px;
     margin: 100px auto;
     position: relative;
-    background: rgb(32, 32, 36);
+    background: transparent;
     box-shadow: 0 0 0 0 rgba(255, 122, 0, 0.7);
 }
 
@@ -38,6 +38,7 @@
     height: 2px;
     top: 50%;
     animation-fill-mode: forwards;
+    z-index: -1;
 }
 
 @keyframes explode {
@@ -50,7 +51,7 @@
 
 @keyframes explode_red {
     !for i in 100 [
-        {i}% {background: radial-gradient(circle at center, red {i}%, white 0%);}
+        {i}% {background: radial-gradient(circle at center, red {i}%, #202024 0%);}
     ]
 }
 

@@ -24,18 +24,11 @@ function getCurrentRotation(el){
   }
 
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-
-circle.addEventListener("click", async function() {
+circle.addEventListener("click", function() {
 
     if (!clickCount) {
+
 
     for (var i = 0; i < lines.length; i ++) {
         lines[i].style.animation = "explode 1s";
@@ -59,6 +52,11 @@ circle.addEventListener("click", async function() {
 
 
     }}, 1000);
+
+    lines[4].style.animation = "explode_red 1s";
+    lines[4].style.zIndex = "1";
+    setTimeout(() => {lines[4].style.background = "red"}, 1000);
+
     clickCount ++;
 } else {
     null;
