@@ -3,8 +3,8 @@ const circle = document.getElementById('circle');
 const lines = document.getElementsByClassName("line");
 let rotations = [0, 60, 45, 30, 90, 315, 300, 270, 240, 225, 210, 180, 150, 135, 120, 330];
 let rotation_info = ["90° , π/2", "150° , 5π/3", "135° , 3π/4","120° , 2π/3", "180° , π", "45° , π/4", "30° , π/6", "0° or 360° , 2π", "330° , 11π/6", "315° , 7π/4", "300° , 5π/3", "270° , 3π/2", "240° , 4π/3", "225° , 5π/4", "210° , 7π/6", "60° , π/3"];
-clickCount = 0;
-
+let clickCount = 0;
+let scrollSpeed = 3;
 
 
 function getCurrentRotation(el){
@@ -64,11 +64,28 @@ circle.addEventListener("click", function() {
 
 });
 
+const degreesToRadians = (deg) => {
+
+    return (`${deg}° ≈ ${((deg * (Math.PI/180)) / Math.PI)}π`);
+
+}
+
+
+const processRotation = (deg) => {
+
+    if (deg + 90 < 360) {
+        return deg + 90
+    } else if (deg + 90 > 360) {
+        return deg - 270;
+    }
+}
+
+
 document.onwheel = function(e) {
 
     if (e.deltaY) {
         e.preventDefault();
-        angle += e.deltaY > 0 ? 3 : -3;
+        angle += e.deltaY > 0 ? scrollSpeed : -scrollSpeed;
         circle.style.transform = "rotate(" + angle + "deg)";
         
         var rotation = getCurrentRotation(document.getElementById("circle"));
@@ -82,9 +99,9 @@ document.onwheel = function(e) {
             document.getElementById("info").innerHTML = info;
             document.getElementById("info").style.color = "white"
         } else {
-            document.getElementById("info").style.color = "#202024";
-            console.log(rotation);
+            document.getElementById("info").innerHTML = degreesToRadians(processRotation(rotation));
         }
+        
         
 
     }
