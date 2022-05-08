@@ -25,7 +25,7 @@ function getCurrentRotation(el){
 
 
 
-circle.addEventListener("click", function() {
+document.getElementsByTagName("body")[0].addEventListener("click", function() {
 
     if (!clickCount) {
 
