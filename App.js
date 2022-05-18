@@ -2,9 +2,25 @@ let angle = 0;
 const circle = document.getElementById('circle');
 const lines = document.getElementsByClassName("line");
 let rotations = [0, 60, 45, 30, 90, 315, 300, 270, 240, 225, 210, 180, 150, 135, 120, 330];
-let rotation_info = ["90° , π/2", "150° , 5π/3", "135° , 3π/4","120° , 2π/3", "180° , π", "45° , π/4", "30° , π/6", "0° or 360° , 2π", "330° , 11π/6", "315° , 7π/4", "300° , 5π/3", "270° , 3π/2", "240° , 4π/3", "225° , 5π/4", "210° , 7π/6", "60° , π/3"];
+// let rotation_info = ["90° , π/2", "150° , 5π/3", "135° , 3π/4","120° , 2π/3", "180° , π", "45° , π/4", "30° , π/6", "0° or 360° , 2π", "330° , 11π/6", "315° , 7π/4", "300° , 5π/3", "270° , 3π/2", "240° , 4π/3", "225° , 5π/4", "210° , 7π/6", "60° , π/3"];
 let clickCount = 0;
 let scrollSpeed = 3;
+
+
+function simplifyFraction(numerator) {
+  let num = numerator == 0 ? 360 : numerator;
+  let den = 180;
+  for (let i = 180; i > 0; i --) {
+    if (num % i == 0 && den % i == 0) {
+      num /= i;
+      den /= i;
+    }
+  }
+
+  return `${num <= 1 ? "" : num}π / ${den}`;
+  
+  
+}
 
 
 function getCurrentRotation(el){
@@ -42,7 +58,7 @@ document.getElementsByTagName("body")[0].addEventListener("click", function() {
         if (rotations.includes(rotation)) {
             console.log("check");
             index = rotations.indexOf(rotation);
-            info = rotation_info[index];
+            info = "90° , π/2";
             console.log(index, info);
             document.getElementById("info").innerHTML = info;
             document.getElementById("info").style.color = "white"
@@ -73,7 +89,7 @@ const degreesToRadians = (deg) => {
 
 const processRotation = (deg) => {
 
-    if (deg + 90 < 360) {
+    if (deg + 90 <= 360) {
         return deg + 90
     } else if (deg + 90 > 360) {
         return deg - 270;
@@ -91,16 +107,8 @@ document.onwheel = function(e) {
         var rotation = getCurrentRotation(document.getElementById("circle"));
 
 
-        if (rotations.includes(rotation)) {
-            console.log("check");
-            index = rotations.indexOf(rotation);
-            info = rotation_info[index];
-            console.log(index, info);
-            document.getElementById("info").innerHTML = info;
-            document.getElementById("info").style.color = "white"
-        } else {
-            document.getElementById("info").innerHTML = degreesToRadians(processRotation(rotation));
-        }
+        
+        document.getElementById("info").innerHTML = `${processRotation(rotation)}° = ${simplifyFraction(processRotation(rotation))}`;
         
         
 
